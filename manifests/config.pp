@@ -37,7 +37,7 @@ class keepalived::config {
 
   concat::fragment { 'keepalived.conf_header':
     target  => "${::keepalived::config_dir}/keepalived.conf",
-    content => "# Managed by Puppet\n",
+    content => "#\n# Managed by Puppet\n#\n\n",
     order   => '001',
   }
 
